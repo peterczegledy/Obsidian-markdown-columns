@@ -47,3 +47,7 @@ Will be rendered as:
 ## Installation
 
 The plugin can be downloaded from the Obsidian plugin browser.
+
+## License
+
+MIT License
