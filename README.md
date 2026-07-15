@@ -46,4 +46,4 @@ Will be rendered as:
 
 ## Installation
 
-The plugin can be downloaded from the Obsidian plugin store.
+The plugin can be downloaded from the Obsidian plugin browser.
