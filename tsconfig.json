@@ -12,7 +12,7 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "module": "ESNext",
-    "target": "es6",
+    "target": "ES2018",
     "allowJs": false,
     "noImplicitAny": true,
     "strictNullChecks": true,

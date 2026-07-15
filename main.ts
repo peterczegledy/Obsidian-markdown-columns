@@ -1,7 +1,8 @@
 import {
     Plugin,
     MarkdownPostProcessorContext,
-    MarkdownRenderer
+    MarkdownRenderer,
+    Component
 } from "obsidian";
 
 
@@ -35,7 +36,7 @@ export default class MarkdownColumnsPlugin extends Plugin {
                         columns[i],
                         column,
                         ctx.sourcePath,
-                        this
+                        new Component()
                     );
                 }
             }

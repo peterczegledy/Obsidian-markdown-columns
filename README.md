@@ -1,4 +1,4 @@
-# Obsidian Columns
+# Markdown Columns
 
 One of Markdown's major limitations is the inability to create columns, even though doing so would be extremely useful in some cases.
 This plugin attempts to address this issue by introducing a new `columns` block.
