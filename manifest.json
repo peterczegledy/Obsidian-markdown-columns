@@ -1,0 +1,10 @@
+{
+  "id": "markdown-columns",
+  "name": "Markdown Columns",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Create multiple markdown columns.",
+  "author": "Czeglédy Péter",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
