@@ -2,7 +2,7 @@ import {
     Plugin,
     MarkdownPostProcessorContext,
     MarkdownRenderer,
-    Component
+    MarkdownRenderChild
 } from "obsidian";
 
 
@@ -26,18 +26,23 @@ export default class MarkdownColumnsPlugin extends Plugin {
                         cls: "markdown-columns-container"
                     });
 
-                for (let i = 0; i < columns.length; i++) {
+                for (const columnText of columns) {
                     const column =
                         container.createDiv({
                             cls: "markdown-column"
                         });
+
+                    const component = new MarkdownRenderChild(column);
+
                     await MarkdownRenderer.render(
                         this.app,
-                        columns[i],
+                        columnText,
                         column,
                         ctx.sourcePath,
-                        new Component()
+                        component
                     );
+
+                    ctx.addChild(component);
                 }
             }
         );

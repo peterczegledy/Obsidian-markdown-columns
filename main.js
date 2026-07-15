@@ -11,11 +11,13 @@ class MarkdownColumnsPlugin extends obsidian.Plugin {
             const container = el.createDiv({
                 cls: "markdown-columns-container"
             });
-            for (let i = 0; i < columns.length; i++) {
+            for (const columnText of columns) {
                 const column = container.createDiv({
                     cls: "markdown-column"
                 });
-                await obsidian.MarkdownRenderer.render(this.app, columns[i], column, ctx.sourcePath, new obsidian.Component());
+                const component = new obsidian.MarkdownRenderChild(column);
+                await obsidian.MarkdownRenderer.render(this.app, columnText, column, ctx.sourcePath, component);
+                ctx.addChild(component);
             }
         });
     }
